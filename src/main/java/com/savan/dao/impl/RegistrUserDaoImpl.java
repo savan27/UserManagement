@@ -267,7 +267,7 @@ public class RegistrUserDaoImpl implements RegisterUserDao {
 			ps.setInt(1, userId);
 
 			int ans = ps.executeUpdate();
-			System.out.println("ans :"+ans);
+			
 			if (ans > 0) {
 				return true;
 			} else {

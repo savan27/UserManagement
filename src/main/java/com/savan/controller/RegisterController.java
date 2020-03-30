@@ -300,6 +300,13 @@ public class RegisterController extends HttpServlet {
 			boolean isuserDeleted = userRegister.deleteUser(userId);
 
 			if (isuserDeleted) {
+				
+				//getting all user info
+				List<RegisterUserModel> userList = userRegister.getAllUser();
+				
+				//setting Updated values to session 
+				session.setAttribute("userList", userList);
+				
 				response.getWriter().write("User Deletion Success full.........");
 			} else {
 				response.getWriter().write("Fail to Delelte User.........");
@@ -334,6 +341,7 @@ public class RegisterController extends HttpServlet {
 				
 				// remove errormassage 
 				session.removeAttribute("errMassage");
+				session.removeAttribute("loginMsg");
 				
 				//remove form values 
 				session.removeAttribute("firstName"); 

@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title></title>
+<title>Profile Page</title>
 
 <!-- including header  -->
 <%@ include file="header.jsp"%>

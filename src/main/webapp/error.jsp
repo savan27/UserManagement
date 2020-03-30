@@ -11,20 +11,11 @@
 </head>
 <body>
 
-	<c:if test="">
-		
-		<font color="red">
-			Error: <c:out value="SomeThing Went Wrong. Please Login Again..!!"></c:out> 
-		</font>
-		
-		<%-- include login page --%>
-		<%@ include file="login.jsp"%>
-		
-	</c:if>
 	
 	<c:choose>
 	  <c:when test="${pageContext.errorData.statusCode eq 500}">
 	    
+	    	<!-- Status Code Is (500)Show to login page with error -->
 			<font color="red">
 				Error: <c:out value="Some Data Is Missing. Please Login Again..!!"></c:out> 
 			</font>

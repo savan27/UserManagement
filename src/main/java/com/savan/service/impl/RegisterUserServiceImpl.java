@@ -222,7 +222,7 @@ public class RegisterUserServiceImpl implements RegisterUserService {
 
 	@Override 
 	public boolean deleteUser(int userId) {
-		System.out.println("1");
+		
 		// RegisterDaoimpl to register user
 		RegisterUserDao regdao = new RegistrUserDaoImpl();
 		return regdao.removeUser(userId);

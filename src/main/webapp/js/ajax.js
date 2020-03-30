@@ -7,7 +7,6 @@ $(document).ready(function() {
 			
 			//get button value
 			var data = $(this).val();
-			alert(data);
 			
 			//removing the row fromthe datatable
 			var a = $('#example6').DataTable();
